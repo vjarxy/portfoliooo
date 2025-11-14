@@ -1,0 +1,12 @@
+$(document).ready(function(){
+  // Smooth scroll
+  $('a[href^="#"]').on('click', function(e){
+    e.preventDefault();
+    var target = $(this.getAttribute('href'));
+    if (target.length){
+      $('html, body').stop().animate({
+        scrollTop: target.offset().top - 70
+      }, 700);
+    }
+  });
+});
